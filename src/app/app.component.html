@@ -1,0 +1,25 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<div class="card">
+  <div class="card-header">
+    You have selected
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>.
+  </div>
+  <div class="card-body">
+    There are <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> was
+    selected.
+  </div>
+  <div class="card-footer">
+    You have selected
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>.
+  </div>
+</div>
+<ng-template #counterTmpl>
+  <span class="badge badge-danger">{{ counter }}</span> items
+</ng-template>
+
+<tabs [navs]="navs" [linkTemplate]="linkTemplate"></tabs>
+
+<ng-template #linkTemplate let-l>
+  <h3>{{ l }}</h3>
+</ng-template>
